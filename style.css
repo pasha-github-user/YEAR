@@ -1,0 +1,105 @@
+* {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: #120C0B;
+}
+.flex  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+.loader img {
+    transform: scale3d(.5, .5, .5);
+    height: 200px;
+    width: 200px;
+    transition: .2s;
+    animation: loader .7s ease-in-out .5s infinite alternate;
+}
+.phrase-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.no-animation {
+    animation-name: none !important;
+    transform: scale3d(1, 1, 1) !important;
+}
+.phrase-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    animation-name: phrase;
+    animation-duration: 2.8s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    visibility: hidden;
+    opacity: 0;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+.phrase-photo img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.phrase {
+    transition: .2s;
+    animation-name: phrase;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 25px;
+    border-radius: 5px;
+    min-width: 200px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 2px solid white;
+    box-shadow: 0 5px 10px 0 rgba(255, 255, 255, 0.5);
+}
+@keyframes phrase {
+    0% {
+        visibility: visible;
+        opacity: 1;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+@keyframes loader {
+    from {
+        transform: scale3d(.5, .5, .5);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
