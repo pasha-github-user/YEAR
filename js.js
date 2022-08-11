@@ -86,6 +86,7 @@ phrasesContainer.innerHTML = getLoader('Нажми на меня', false)
 const insertPhrase = () => {
     music.play()
     var counter = 0;
+    phrasesContainer.requestFullscreen({navigationUI: "hide"})
     phrasesContainer.innerHTML = getLoader('Любовь загружается...', true)
     setInterval(function(){
 
