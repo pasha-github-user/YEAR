@@ -62,7 +62,8 @@ const phrases = [
         phrase: '&#129325;',
         img: 'img/3.jpg'
     },
-    'Но это уже совсем другая история...&#10084;'
+    'Но это уже совсем другая история...&#10084;',
+    'Ну а пока'
 ]
 const getPhraseWithImg = idx => `
 <div class="phrase-container">
